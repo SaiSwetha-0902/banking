@@ -25,14 +25,14 @@ jobs:
       - name: Build and push backend
         uses: docker/build-push-action@v6
         with:
-          context: ./grocery-spring
+          context: ./backing-system-backend
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/spring-backend:latest
 
       - name: Build and push frontend
         uses: docker/build-push-action@v6
         with:
-          context: ./grocery-angular
+          context: ./backing-system-frontend
           push: true
           tags: ${{ secrets.DOCKER_USERNAME }}/angular-frontend:latest
 
